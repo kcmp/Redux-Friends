@@ -3,7 +3,7 @@ import { NavLink, Route } from 'react-router-dom';
 
 import './App.css';
 import FriendsList from './components/FriendsList';
-import AddForm from './Components/AddFriend';
+import AddForm from './components/AddForm';
 
 class App extends Component {
   render() {
