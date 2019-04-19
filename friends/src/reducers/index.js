@@ -12,24 +12,26 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch(action.type){
-        case LOADING:
-            return Object.assign(
-                {}, 
+        case LOADING: {
+            return { 
                 ...state, 
-                {loading: true}
-                )
-        case ERROR_MESSAGE:
-            return Object.assign(
-                {}, 
+                loading: true
+            };
+        }
+        case ERROR_MESSAGE:{
+            return {                 
                 ...state, 
-                {error: action.errorMessage, loading: false }
-                )
-        case GET_FRIENDS:
-            return Object.assign(
-                {}, 
+                error: action.errorMessage, 
+                loading: false 
+            };
+        }                
+        case GET_FRIENDS: {
+            return {                 
                 ...state, 
-                {friends: action.friends, loading: false, error: '' }
-                )
+                friends: action.friends, 
+                loading: false, error: ''
+            }
+        }        
         default:
             return state
     }

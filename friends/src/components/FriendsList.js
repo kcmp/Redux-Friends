@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Friend from '../Components/Friend';
-import { getFriends } from '../Actions/actions';
+import Friend from './Friend';
+import { getFriends } from '../actions';
 
 class FriendsList extends Component {
     componentDidMount(){
