@@ -3,6 +3,7 @@ import { NavLink, Route } from 'react-router-dom';
 
 import './App.css';
 import FriendsList from './components/FriendsList';
+import AddForm from './Components/AddFriend';
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
         <header>Ya gotta have friends!</header>
         <NavLink to="/add">Add a new friend</NavLink>
 
-        
+        <AddForm />
 
         <Route exact path="/" component={FriendsList} />
         
