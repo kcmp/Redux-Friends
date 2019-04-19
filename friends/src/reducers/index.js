@@ -10,27 +10,29 @@ const initialState = {
     error: ''
 }
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch(action.type){
         case LOADING:
             return Object.assign(
                 {}, 
-                state, 
+                ...state, 
                 {loading: true}
                 )
         case ERROR_MESSAGE:
             return Object.assign(
                 {}, 
-                state, 
+                ...state, 
                 {error: action.errorMessage, loading: false }
                 )
         case GET_FRIENDS:
             return Object.assign(
                 {}, 
-                state, 
+                ...state, 
                 {friends: action.friends, loading: false, error: '' }
                 )
         default:
             return state
     }
 }
+
+export default reducer;
