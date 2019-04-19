@@ -10,9 +10,9 @@ class App extends Component {
     return (
       <div className="App">
         <header>Ya gotta have friends!</header>
-        <NavLink to="/add">Add a new friend</NavLink>
-
-        <AddForm />
+        <NavLink to="/add">Add a new friend</NavLink>          
+          <AddForm />
+        
 
         <Route exact path="/" component={FriendsList} />
         
